@@ -17,14 +17,14 @@ const createWindow = () => {
 			preload: path.join(__dirname, 'preload.js'),
 			contextIsolation: true
     	},
-		title: 'Actarius',
+		title: 'Ogma',
 		icon: __dirname + '/res/icon.png'
   	});
 
   	// and load the index.html of the app.
   	mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
-	mainWindow.setTitle('Actarius')
+	mainWindow.setTitle('Ogma')
 
   	// Open the DevTools.
   	// mainWindow.webContents.openDevTools();

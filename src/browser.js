@@ -49,7 +49,7 @@ tabsContainer.addEventListener('contextmenu', (e) => {
 
 function handleDidNavigate(event) {
     if (event.url.startsWith('file://')) return
-    if (event.url.startsWith('https://cdn.lbryplayer.xyz/api/') && event.url.endsWith('?actariusDisplay=false')) return
+    if (event.url.startsWith('https://cdn.lbryplayer.xyz/api/') && event.url.endsWith('?ogmaDisplay=false')) return
 
     // URL changed and the webview is showing a different page than before
 
@@ -233,7 +233,7 @@ async function viewContentViaOdyseeAPI() {
         case 'image/png':
         case 'image/webp':
         case 'application/pdf':
-           currentWebview.loadURL(urlResponseJSON.streaming_url + '?actariusDisplay=false')
+           currentWebview.loadURL(urlResponseJSON.streaming_url + '?ogmaDisplay=false')
            break
         default:
             currentWebview.loadURL(window.pathHelper.getContentUtilityURL('noContentUtility'))

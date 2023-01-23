@@ -39,10 +39,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shroom2020/actarius-lbry-browser.git"
+    "url": "https://github.com/LBRY-Coding/ogma.git"
   },
   "bugs": {
-    "url": "https://github.com/Shroom2020/actarius-lbry-browser/issues"
+    "url": "https://github.com/LBRY-Coding/ogma/issues"
   },
   "license": "MIT",
   "config": {
