@@ -102,7 +102,7 @@
     "electron-builder-squirrel-windows": "^23.6.0",
     "electron-context-menu": "^3.6.1",
     "electron-squirrel-startup": "^1.0.0",
-    "meow": "^10.1.2",
+    "meow": "^11.0.0",
     "trim-newlines": "^4.0.2"
   },
   "devDependencies": {
