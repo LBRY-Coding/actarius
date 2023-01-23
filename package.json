@@ -1,6 +1,6 @@
 {
-  "name": "actarius",
-  "productName": "Actarius",
+  "name": "ogma",
+  "productName": "Ogma",
   "version": "0.1.0",
   "description": "An Electron-based browser that can view LBRY URLs.",
   "private": true,
@@ -17,12 +17,16 @@
     "LBRY",
     "Electron"
   ],
-  "author": "shroom",
+  "author": "Oscar Sanderson",
   "contributors": [
     {
       "name": "Oscar Sanderson",
-      "email": "sandrolinux@aol.com",
+      "email": "hello@sandrolinux.com",
       "url": "https://sandrolinux.com/"
+    },
+    {
+      "name": "Pigges",
+      "url": "https://pigg.es/"
     },
     {
       "name": "Lav Radis",
@@ -45,7 +49,7 @@
     "forge": {
       "packagerConfig": {
         "icon": "src/res/icon",
-        "name": "Actarius"
+        "name": "Ogma"
       },
       "makers": [
         {
@@ -54,7 +58,7 @@
             "darwin"
           ],
           "config": {
-            "name": "Actarius",
+            "name": "Ogma",
             "iconUrl": "./src/res/icon.icns",
             "icon": "./src/res/icon.icns"
           }
@@ -65,7 +69,7 @@
             "win32"
           ],
           "config": {
-            "name": "Actarius"
+            "name": "Ogma"
           }
         },
         {
@@ -74,7 +78,7 @@
             "linux"
           ],
           "config": {
-            "name": "Actarius"
+            "name": "Ogma"
           }
         },
         {
@@ -83,7 +87,7 @@
             "linux"
           ],
           "config": {
-            "name": "Actarius"
+            "name": "Ogma"
           }
         },
         {
@@ -92,7 +96,7 @@
             "linux"
           ],
           "config": {
-            "name": "Actarius"
+            "name": "Ogma"
           }
         }
       ]
@@ -103,7 +107,8 @@
     "electron-context-menu": "^3.6.1",
     "electron-squirrel-startup": "^1.0.0",
     "meow": "^11.0.0",
-    "trim-newlines": "^4.0.2"
+    "trim-newlines": "^4.0.2",
+    "url-parse": "^1.5.10"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.4",
