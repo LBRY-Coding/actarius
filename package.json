@@ -103,7 +103,7 @@
     }
   },
   "dependencies": {
-    "electron-builder-squirrel-windows": "^23.6.0",
+    "electron-builder-squirrel-windows": "^24.1.1",
     "electron-context-menu": "^3.6.1",
     "electron-squirrel-startup": "^1.0.0",
     "meow": "^11.0.0",
