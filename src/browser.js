@@ -200,8 +200,9 @@ async function viewContentViaOdyseeAPI() {
 
     // Get streaming URL from Odysee backend
 
+    const cdn = 'https://cdn.lbry.pigg.es/stream/';
     let resp = await fetch("https://lbry.pigg.es/$/api/get?uri=" + urlInput.value)
-    resp = await resp.json()
+    resp = await resp.json();
     console.log(resp)
 
     
@@ -209,17 +210,17 @@ async function viewContentViaOdyseeAPI() {
     switch (resp.metadata.stream_type) {
         // Switch through built-in content utilities if no custom ones are available
         case 'document':
-            if (resp.metadata.source.media_type === 'text/markdown') currentWebview.loadURL(window.pathHelper.getContentUtilityURL('markdown') + `?url=${resp.streaming_url}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`);
-            else if (resp.metadata.source.media_type === 'text/plain') currentWebview.loadURL(window.pathHelper.getContentUtilityURL('plain') + `?url=${resp.streaming_url}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`);
+            if (resp.metadata.source.media_type === 'text/markdown') currentWebview.loadURL(window.pathHelper.getContentUtilityURL('markdown') + `?url=${cdn + resp.sd_hash}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`);
+            else if (resp.metadata.source.media_type === 'text/plain') currentWebview.loadURL(window.pathHelper.getContentUtilityURL('plain') + `?url=${cdn + resp.sd_hash}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`);
             break;
         case 'image':
-            currentWebview.loadURL(window.pathHelper.getContentUtilityURL('image') + `?url=${resp.streaming_url}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`)
+            currentWebview.loadURL(window.pathHelper.getContentUtilityURL('image') + `?url=${cdn + resp.sd_hash}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`)
             break;
         case 'video':
-            currentWebview.loadURL(window.pathHelper.getContentUtilityURL('video') + `?url=${resp.streaming_url}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`)
+            currentWebview.loadURL(window.pathHelper.getContentUtilityURL('video') + `?url=${cdn + resp.sd_hash}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`)
             break;
         case 'audio':
-            currentWebview.loadURL(window.pathHelper.getContentUtilityURL('audio') + `?url=${resp.streaming_url}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`)
+            currentWebview.loadURL(window.pathHelper.getContentUtilityURL('audio') + `?url=${cdn + resp.sd_hash}&title=${resp.metadata.title}&timestamp=${resp.timestamp}`)
             break;
         case 'text/plain':
         case 'audio/mpeg':
