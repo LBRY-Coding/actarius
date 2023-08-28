@@ -106,7 +106,7 @@
     "electron-builder-squirrel-windows": "^24.2.1",
     "electron-context-menu": "^3.6.1",
     "electron-squirrel-startup": "^1.0.0",
-    "meow": "^11.0.0",
+    "meow": "^12.1.1",
     "trim-newlines": "^5.0.0",
     "url-parse": "^1.5.10"
   },
